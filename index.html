@@ -6,7 +6,7 @@
   <title>Rohit Sharma | Portfolio</title>
   <link rel="stylesheet" href="css/index.css" /> 
 </head>
-<body style="background-color: #0d0d0d; color: #fff;">
+ <body style="background-color: #0d0d0d; color: #fff;">
 
   <!-- Navigation -->
   <nav>
@@ -16,9 +16,17 @@
         <li><a href="about.html">About Me</a></li>
         <li><a href="skills.html">Skills</a></li>
         <li><a href="projects.html">Projects</a></li>
-        <li><a href="certificates.html">Certificates & Experiences</a> </li>
+        <li><a href="certificates.html">My Certificates</a> </li>
+        <li><a href="Experience.html">My Experiences</a> </li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
+
+          <button class="menu-toggle" aria-label="Open menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
     </div>
   </nav>
 
@@ -52,6 +60,28 @@
     </div>
   </footer>
 
-  <script src="js/script.js"></script>
+   <script>
+   
+   const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('fade-in');
+    }
+  });
+}, { threshold: 0.5});
+
+document.querySelectorAll('.section').forEach(section => {
+  section.classList.add('fade-init');
+  observer.observe(section);
+});
+
+const menuToggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+</script>
+
 </body>
 </html>

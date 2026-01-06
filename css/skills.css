@@ -48,6 +48,49 @@ nav {
   border-bottom: 2px solid #a855f7;
 }
 
+
+/* ---------- Hamburger Button ---------- */
+.menu-toggle {
+  display: none; /* hidden on laptop */
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background-color: #ffffff;
+  border-radius: 2px;
+}
+
+/* ---------- Mobile Styles ---------- */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex; /* show hamburger */
+  }
+
+  .nav-links {
+    display: none; /* hide normal nav */
+    position: absolute;
+    top: 65px;
+    right: 20px;
+    background-color: #0d0d0d;
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+  }
+
+  .nav-links.active {
+    display: flex; /* show menu on click */
+  }
+}
+
+
 /* -------------------------------
    🦋 Hero Section
 -------------------------------- */

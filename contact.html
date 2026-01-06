@@ -8,19 +8,25 @@
 </head>
 <body>
   <!-- Navigation -->
-  <nav>
+ <nav>
     <div class="container nav-container">
       <h1 class="logo">Rohit Sharma<span>.</span></h1>
       <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Me</a></li>
         <li><a href="skills.html">Skills</a></li>
         <li><a href="projects.html">Projects</a></li>
-        <li><a href="certificates.html">Certificates & Experiences</a></li>
+        <li><a href="certificates.html">My Certificates</a> </li>
+        <li><a href="Experience.html">My Experiences</a> </li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
+          <button class="menu-toggle" aria-label="Open menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
     </div>
   </nav>
-
   <!-- Contact Section -->
   <section class="section contact-page">
     <div class="container">
@@ -39,7 +45,7 @@
         <div class="contact-info">
           <p><strong>Email: </strong><a href="https://mail.google.com/mail/?view=cm&fs=1&to=rohit.sharma.rnks@gmail.com" target="_blank">rohit.sharma.rnks@gmail.com</a>
 </p>
-          <p><strong>GitHub:</strong> <a href="https://github.com/NeonSync" target="_blank">NeonSync</a></p>
+          <p><strong>GitHub:</strong> <a href="https://github.com/rohit-sharma25" target="_blank">rohit-sharma25</a></p>
           <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/rohit-sharma-codes/" target="_blank">rohit-sharma-codes</a></p>
           <p><strong>Contacts:</strong> +91 7619719601</p>
         </div>
@@ -77,6 +83,26 @@
   });
   </script>
 
-  <script src="js/script.js"></script>
+  <script>const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('fade-in');
+    }
+  });
+}, { threshold: 0.5});
+
+document.querySelectorAll('.section').forEach(section => {
+  section.classList.add('fade-init');
+  observer.observe(section);
+});
+
+const menuToggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+</script>
+
 </body>
 </html>
