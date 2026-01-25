@@ -14,7 +14,7 @@ Built with clean HTML, CSS, and a purple-black aesthetic — this portfolio refl
 🤖 Exploring Face Recognition, Digital Electronics, and DSA
 
 🛠 Tech Stack:
-HTML, CSS, JavaScript
+HTML, CSS, JavaScript, Python
 
 Git & GitHub, VS Code
 

@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rohit Sharma | Portfolio</title>
-  <link rel="stylesheet" href="css/index.css" /> 
+  <link rel="stylesheet" href="css/index.css" />
 </head>
- <body style="background-color: #0d0d0d; color: #fff;">
+
+<body style="background-color: #0d0d0d; color: #fff;">
 
   <!-- Navigation -->
   <nav>
@@ -21,11 +23,11 @@
         <li><a href="contact.html">Contact</a></li>
       </ul>
 
-          <button class="menu-toggle" aria-label="Open menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+      <button class="menu-toggle" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
     </div>
   </nav>
@@ -45,10 +47,13 @@
       <img src="images/myphoto.jpg" alt="My Photo" class="profile-photo" />
       <div class="intro-text">
         <h3>Who Am I?</h3>
-        <p>I’m Rohit Sharma, a curious learner and creative web developer who loves bringing ideas to life through clean design and smart code.
-          I enjoy experimenting with new technologies, building responsive websites, and improving every project I work on.
-          Every line of code I write brings me closer to my goal — to build something meaningful and lasting in tech.</p>
-         <a href="about.html" class="btn-outline">More About Me →</a>
+        <p>I’m Rohit Sharma, a curious learner and creative web developer who loves bringing ideas to life through clean
+          design and smart code.
+          I enjoy experimenting with new technologies, building responsive websites, and improving every project I work
+          on.
+          Every line of code I write brings me closer to my goal — to build something meaningful and lasting in tech.
+        </p>
+        <a href="about.html" class="btn-outline">More About Me →</a>
       </div>
     </div>
   </section>
@@ -60,28 +65,29 @@
     </div>
   </footer>
 
-   <script>
-   
-   const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('fade-in');
-    }
-  });
-}, { threshold: 0.5});
+  <script>
 
-document.querySelectorAll('.section').forEach(section => {
-  section.classList.add('fade-init');
-  observer.observe(section);
-});
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fade-in');
+        }
+      });
+    }, { threshold: 0.5 });
 
-const menuToggle = document.querySelector(".menu-toggle");
-const navLinks = document.querySelector(".nav-links");
+    document.querySelectorAll('.section').forEach(section => {
+      section.classList.add('fade-init');
+      observer.observe(section);
+    });
 
-menuToggle.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
-});
-</script>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  </script>
 
 </body>
+
 </html>

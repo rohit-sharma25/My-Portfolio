@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact | Rohit Sharma</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
   <!-- Navigation -->
- <nav>
+  <nav>
     <div class="container nav-container">
       <h1 class="logo">Rohit Sharma<span>.</span></h1>
       <ul class="nav-links">
@@ -19,11 +21,11 @@
         <li><a href="Experience.html">My Experiences</a> </li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
-          <button class="menu-toggle" aria-label="Open menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+      <button class="menu-toggle" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
     </div>
   </nav>
@@ -43,10 +45,12 @@
         </form>
 
         <div class="contact-info">
-          <p><strong>Email: </strong><a href="https://mail.google.com/mail/?view=cm&fs=1&to=rohit.sharma.rnks@gmail.com" target="_blank">rohit.sharma.rnks@gmail.com</a>
-</p>
+          <p><strong>Email: </strong><a href="https://mail.google.com/mail/?view=cm&fs=1&to=rohit.sharma.rnks@gmail.com"
+              target="_blank">rohit.sharma.rnks@gmail.com</a>
+          </p>
           <p><strong>GitHub:</strong> <a href="https://github.com/rohit-sharma25" target="_blank">rohit-sharma25</a></p>
-          <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/rohit-sharma-codes/" target="_blank">rohit-sharma-codes</a></p>
+          <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/rohit-sharma-codes/"
+              target="_blank">rohit-sharma-codes</a></p>
           <p><strong>Contacts:</strong> +91 7619719601</p>
         </div>
       </div>
@@ -62,47 +66,48 @@
 
   <!-- JS to Prevent Redirect -->
   <script>
-  const form = document.getElementById('contact-form');
-  const status = document.getElementById('form-status');
+    const form = document.getElementById('contact-form');
+    const status = document.getElementById('form-status');
 
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault(); // Prevent page reload
-    const data = new FormData(form);
-    const response = await fetch(form.action, {
-      method: form.method,
-      body: data,
-      headers: { 'Accept': 'application/json' }
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault(); // Prevent page reload
+      const data = new FormData(form);
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+      if (response.ok) {
+        status.textContent = "Message sent successfully!";
+        form.reset();
+      } else {
+        status.textContent = "Oops! Something went wrong. Please try again.";
+        status.style.color = "#ff4d4d";
+      }
     });
-    if (response.ok) {
-      status.textContent = "Message sent successfully!";
-      form.reset();
-    } else {
-      status.textContent = "Oops! Something went wrong. Please try again.";
-      status.style.color = "#ff4d4d";
-    }
-  });
   </script>
 
   <script>const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('fade-in');
-    }
-  });
-}, { threshold: 0.5});
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fade-in');
+        }
+      });
+    }, { threshold: 0.5 });
 
-document.querySelectorAll('.section').forEach(section => {
-  section.classList.add('fade-init');
-  observer.observe(section);
-});
+    document.querySelectorAll('.section').forEach(section => {
+      section.classList.add('fade-init');
+      observer.observe(section);
+    });
 
-const menuToggle = document.querySelector(".menu-toggle");
-const navLinks = document.querySelector(".nav-links");
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
 
-menuToggle.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
-});
-</script>
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  </script>
 
 </body>
+
 </html>

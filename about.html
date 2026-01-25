@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,11 +10,11 @@
   </style>
 </head>
 
-<script ></script>
+<script></script>
 
 <body>
   <!-- Navigation -->
-   <nav>
+  <nav>
     <div class="container nav-container">
       <h1 class="logo">Rohit Sharma<span>.</span></h1>
       <ul class="nav-links">
@@ -25,12 +26,12 @@
         <li><a href="contact.html">Contact</a></li>
       </ul>
 
-      
-    <button class="menu-toggle" aria-label="Open menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+
+      <button class="menu-toggle" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
     </div>
   </nav>
@@ -42,13 +43,17 @@
       <div class="about-text">
         <h2>Who Am I?</h2>
         <p>
-          I’m <strong>Rohit Sharma</strong>, a passionate web developer and computer science student. I love building sleek, responsive websites and solving real-world problems with code. My journey started with HTML and CSS, and now I’m expanding into JavaScript, Python, C, and backend technologies.
+          I’m <strong>Rohit Sharma</strong>, a passionate web developer and computer science student. I love building
+          sleek, responsive websites and solving real-world problems with code. My journey started with HTML and CSS,
+          and now I’m expanding into JavaScript, Python, C, and backend technologies.
         </p>
         <p>
-          I'm currently pursuing my B.Tech in Computer Science and exploring areas like frontend design, problem-solving, digital electronics, and system development.
+          I'm currently pursuing my B.Tech in Computer Science and exploring areas like frontend design,
+          problem-solving, digital electronics, and system development.
         </p>
         <p>
-          Aside from coding, I’m deeply committed to personal growth — improving discipline, mindset, and learning how to become a well-rounded, grounded man in this world.
+          Aside from coding, I’m deeply committed to personal growth — improving discipline, mindset, and learning how
+          to become a well-rounded, grounded man in this world.
         </p>
         <p>
           My goal is to work on impactful tech products and constantly evolve into a better developer and human being.
@@ -58,10 +63,12 @@
 
     <!-- Buttons Section -->
     <div class="button-container">
-      <a href="https://drive.google.com/file/d/1Q9TBd3_ARGa0lXQINdUiOQA3MdgflM-k/view?usp=sharing" class="social-btn" target="_blank">My Resume</a>
+      <a href="https://drive.google.com/file/d/1hybrsGXw-OwlXqZsNLrhlL-VEqcA2S7z/view?usp=sharing" class="social-btn"
+        target="_blank">My Resume</a>
       <a href="https://www.linkedin.com/in/rohit-sharma225/" class="social-btn" target="_blank"> LinkedIn</a>
       <a href="https://github.com/rohit-sharma25" class="social-btn" target="_blank"> GitHub</a>
-      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=rohit.sharma.rnks@gmail.com" target="_blank" class="social-btn">Gmail</a>
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=rohit.sharma.rnks@gmail.com" target="_blank"
+        class="social-btn">Gmail</a>
 
     </div>
   </section>
@@ -74,25 +81,26 @@
   </footer>
 
   <script>const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('fade-in');
-    }
-  });
-}, { threshold: 0.5});
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fade-in');
+        }
+      });
+    }, { threshold: 0.5 });
 
-document.querySelectorAll('.section').forEach(section => {
-  section.classList.add('fade-init');
-  observer.observe(section);
-});
+    document.querySelectorAll('.section').forEach(section => {
+      section.classList.add('fade-init');
+      observer.observe(section);
+    });
 
-const menuToggle = document.querySelector(".menu-toggle");
-const navLinks = document.querySelector(".nav-links");
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
 
-menuToggle.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
-});
-</script>
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  </script>
 
 </body>
+
 </html>
