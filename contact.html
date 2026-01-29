@@ -5,53 +5,100 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact | Rohit Sharma</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/contact.css" />
 </head>
 
 <body>
   <!-- Navigation -->
   <nav>
-    <div class="container nav-container">
+    <div class="nav-container">
       <h1 class="logo">Rohit Sharma<span>.</span></h1>
       <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Me</a></li>
         <li><a href="skills.html">Skills</a></li>
         <li><a href="projects.html">Projects</a></li>
-        <li><a href="certificates.html">My Certificates</a> </li>
-        <li><a href="Experience.html">My Experiences</a> </li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="Certificates.html">Certificates</a></li>
+        <li><a href="Experience.html">Experience</a></li>
       </ul>
       <button class="menu-toggle" aria-label="Open menu">
         <span></span>
         <span></span>
         <span></span>
       </button>
-
     </div>
   </nav>
+
   <!-- Contact Section -->
   <section class="section contact-page">
     <div class="container">
-      <h2>Get In Touch</h2>
-      <p>If you have any questions, project ideas, or want to collaborate, feel free to drop a message.</p>
+      <div class="page-header">
+        <h2 class="gradient-text">Get In Touch</h2>
+        <p class="page-subtitle">Have a question or want to work together? I'd love to hear from you!</p>
+      </div>
 
       <div class="contact-container">
-        <form id="contact-form" action="https://formspree.io/f/xkgqzyoo" method="POST" class="contact-form">
-          <input type="text" name="name" placeholder="Your Name" required />
-          <input type="email" name="email" placeholder="Your Email" required />
-          <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-          <button type="submit" class="btn">Send Message</button>
-          <p id="form-status" style="margin-top: 10px; color: #4CAF50;"></p>
-        </form>
+        <!-- Contact Form -->
+        <div class="contact-form-wrapper glass">
+          <h3 class="form-title">Send Me a Message</h3>
+          <form id="contact-form" action="https://formspree.io/f/xkgqzyoo" method="POST" class="contact-form">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="John Doe" required />
+            </div>
 
-        <div class="contact-info">
-          <p><strong>Email: </strong><a href="https://mail.google.com/mail/?view=cm&fs=1&to=rohit.sharma.rnks@gmail.com"
-              target="_blank">rohit.sharma.rnks@gmail.com</a>
-          </p>
-          <p><strong>GitHub:</strong> <a href="https://github.com/rohit-sharma25" target="_blank">rohit-sharma25</a></p>
-          <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/rohit-sharma-codes/"
-              target="_blank">rohit-sharma-codes</a></p>
-          <p><strong>Contacts:</strong> +91 7619719601</p>
+            <div class="form-group">
+              <label for="email">Your Email</label>
+              <input type="email" id="email" name="email" placeholder="john@example.com" required />
+            </div>
+
+            <div class="form-group">
+              <label for="message">Your Message</label>
+              <textarea id="message" name="message" rows="6" placeholder="Tell me about your project..."
+                required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-submit">
+              <span>Send Message</span>
+              <span class="btn-icon">📧</span>
+            </button>
+
+            <p id="form-status" class="form-status"></p>
+          </form>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="contact-info-wrapper">
+          <div class="contact-info-card glass">
+            <div class="info-icon">📧</div>
+            <h4>Email</h4>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=rohit.sharma.rnks@gmail.com" target="_blank">
+              rohit.sharma.rnks@gmail.com
+            </a>
+          </div>
+
+          <div class="contact-info-card glass">
+            <div class="info-icon">🐙</div>
+            <h4>GitHub</h4>
+            <a href="https://github.com/rohit-sharma25" target="_blank">
+              rohit-sharma25
+            </a>
+          </div>
+
+          <div class="contact-info-card glass">
+            <div class="info-icon">💼</div>
+            <h4>LinkedIn</h4>
+            <a href="https://www.linkedin.com/in/rohit-sharma225/" target="_blank">
+              rohit-sharma225
+            </a>
+          </div>
+
+          <div class="contact-info-card glass">
+            <div class="info-icon">📱</div>
+            <h4>Phone</h4>
+            <p>+91 7619719601</p>
+          </div>
         </div>
       </div>
     </div>
@@ -60,51 +107,46 @@
   <!-- Footer -->
   <footer>
     <div class="container">
-      <p>© 2025 Rohit Sharma. All rights reserved.</p>
+      <p>© <span class="current-year">2025</span> Rohit Sharma. All rights reserved.</p>
     </div>
   </footer>
 
-  <!-- JS to Prevent Redirect -->
+  <script src="js/main.js"></script>
   <script>
+    // Contact Form Handling
     const form = document.getElementById('contact-form');
     const status = document.getElementById('form-status');
 
     form.addEventListener('submit', async (e) => {
-      e.preventDefault(); // Prevent page reload
+      e.preventDefault();
+
+      const submitBtn = form.querySelector('.btn-submit');
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<span>Sending...</span><span class="btn-icon">⏳</span>';
+
       const data = new FormData(form);
-      const response = await fetch(form.action, {
-        method: form.method,
-        body: data,
-        headers: { 'Accept': 'application/json' }
-      });
-      if (response.ok) {
-        status.textContent = "Message sent successfully!";
-        form.reset();
-      } else {
-        status.textContent = "Oops! Something went wrong. Please try again.";
-        status.style.color = "#ff4d4d";
-      }
-    });
-  </script>
 
-  <script>const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('fade-in');
+      try {
+        const response = await fetch(form.action, {
+          method: form.method,
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+          status.textContent = "✅ Message sent successfully! I'll get back to you soon.";
+          status.className = 'form-status success';
+          form.reset();
+        } else {
+          throw new Error('Form submission failed');
         }
-      });
-    }, { threshold: 0.5 });
-
-    document.querySelectorAll('.section').forEach(section => {
-      section.classList.add('fade-init');
-      observer.observe(section);
-    });
-
-    const menuToggle = document.querySelector(".menu-toggle");
-    const navLinks = document.querySelector(".nav-links");
-
-    menuToggle.addEventListener("click", () => {
-      navLinks.classList.toggle("active");
+      } catch (error) {
+        status.textContent = "❌ Oops! Something went wrong. Please try again.";
+        status.className = 'form-status error';
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = '<span>Send Message</span><span class="btn-icon">📧</span>';
+      }
     });
   </script>
 

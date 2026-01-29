@@ -5,19 +5,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projects | Rohit Sharma</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/projects.css" />
 </head>
 
 <body>
   <nav>
-    <div class="container nav-container">
+    <div class="nav-container">
       <h1 class="logo">Rohit Sharma<span>.</span></h1>
       <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Me</a></li>
         <li><a href="skills.html">Skills</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="certificates.html">My Certificates</a> </li>
-        <li><a href="Experience.html">My Experiences</a> </li>
+        <li><a href="Certificates.html">Certificates</a></li>
+        <li><a href="Experience.html">Experience</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
       <button class="menu-toggle" aria-label="Open menu">
@@ -30,146 +31,225 @@
 
   <section class="section projects-page">
     <div class="container">
-      <h2>My Projects</h2>
-      <p>Here are some of the personal and academic projects I've worked on.</p>
+      <div class="page-header">
+        <h2 class="gradient-text">My Projects</h2>
+        <p class="page-subtitle">A collection of personal and academic projects showcasing my skills</p>
+      </div>
 
       <!-- 🌐 Web Development Projects -->
-      <h3 style="text-align:center; color:#a855f7; margin-top:40px;">🌐 Web Development</h3>
-      <div class="projects-grid">
-        <div class="project-card">
-          <img src="images/autofixnow.png" alt="Portfolio Website" class="project-image" />
-          <h3>Auto Fix Now</h3>
-          <p>Built AutoFixNow, a web-based platform that connects users with nearby on-spot vehicle service providers
-            such as puncture repair and emergency assistance.</p>
-          <div class="project-links">
-            <a href="https://github.com/rohit-sharma25/AutoFixNow" target="_blank">GitHub</a>
-            <a href="https://autofixnow.onrender.com/login" target="_blank">Live Link</a>
+      <div class="category-section">
+        <h3 class="category-title">🌐 Web Development</h3>
+        <div class="projects-grid">
+          <div class="project-card card">
+            <div class="project-image-wrapper">
+              <img src="images/autofixnow.png" alt="Auto Fix Now" class="project-image" />
+              <div class="project-overlay">
+                <span class="project-tag">Full Stack</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>Auto Fix Now</h3>
+              <p>Built AutoFixNow, a web-based platform that connects users with nearby on-spot vehicle service
+                providers
+                such as puncture repair and emergency assistance.</p>
+              <div class="project-links">
+                <a href="https://github.com/rohit-sharma25/AutoFixNow" target="_blank" class="btn-outline">GitHub</a>
+                <a href="https://autofixnow.onrender.com/login" target="_blank" class="btn">Live Demo</a>
+              </div>
+            </div>
           </div>
-        </div>
 
-        <div class="project-card">
-          <img src="images/NikeUp.png" alt="Portfolio Website" class="project-image" />
-          <h3>Nike Demo Website</h3>
-          <p>Developed a Nike-inspired website using HTML, CSS, and JavaScript, optimized for desktop and mobile
-            devices. Implemented smooth responsiveness to enhance user experience.</p>
-          <div class="project-links">
-            <a href="https://github.com/rohit-sharma25/Nike-Clone-Web" target="_blank">GitHub</a>
-            <a href="https://nike-three-liard.vercel.app/" target="_blank">Live Link</a>
+          <div class="project-card card">
+            <div class="project-image-wrapper">
+              <img src="images/NikeUp.png" alt="Nike Demo Website" class="project-image" />
+              <div class="project-overlay">
+                <span class="project-tag">Frontend</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>Nike Demo Website</h3>
+              <p>Developed a Nike-inspired website using HTML, CSS, and JavaScript, optimized for desktop and mobile
+                devices. Implemented smooth responsiveness to enhance user experience.</p>
+              <div class="project-links">
+                <a href="https://github.com/rohit-sharma25/Nike-Clone-Web" target="_blank"
+                  class="btn-outline">GitHub</a>
+                <a href="https://nike-three-liard.vercel.app/" target="_blank" class="btn">Live Demo</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
       <!-- 🐍 Python Projects -->
-      <h3 style="text-align:center; color:#a855f7; margin-top:60px;">🐍 Python Projects</h3>
-      <div class="projects-grid">
-        <div class="project-card">
-          <img src="images/flappy.png" alt="Flappy Game" class="project-image" />
-          <h3>Flappy Game</h3>
-          <p>Developed a browser-based Flappy-style game using python and its libraries pygame, asyncio,
-            random featuring real-time animations, collision detection, and score tracking. </p>
-          <div class="project-links">
-            <a href="https://github.com/rohit-sharma25/Flappy_game-" target="_blank">GitHub</a>
+      <div class="category-section">
+        <h3 class="category-title">🐍 Python & AI Projects</h3>
+        <div class="projects-grid">
+          <div class="project-card card">
+            <div class="project-image-wrapper">
+              <img src="images/flappy.png" alt="Flappy Game" class="project-image" />
+              <div class="project-overlay">
+                <span class="project-tag">Python</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>Flappy Game</h3>
+              <p>Developed a browser-based Flappy-style game using python and its libraries pygame, asyncio,
+                random featuring real-time animations, collision detection, and score tracking.</p>
+              <div class="project-links">
+                <a href="https://github.com/rohit-sharma25/Flappy_game-" target="_blank" class="btn-outline">GitHub</a>
+              </div>
+            </div>
           </div>
-        </div>
 
-        <div class="project-card">
-          <img src="images/faceInsight.png" alt="Face Recognition" class="project-image" />
-          <h3>Face Insight 👁️</h3>
-          <p>FaceInsight is a computer vision–based application that detects human faces in real time and predicts key
-            facial attributes, including age range and mood/emotional state.</p>
-          <div class="project-links">
-            <a href="https://github.com/rohit-sharma25/face-detection" target="_blank">GitHub</a>
-            <a href="https://face-recognition-git-main-rohit-s-projects-0ba6e1fb.vercel.app/" target="_blank">Live
-              Link</a>
+          <div class="project-card card">
+            <div class="project-image-wrapper">
+              <img src="images/faceInsight.png" alt="Face Recognition" class="project-image" />
+              <div class="project-overlay">
+                <span class="project-tag">AI/ML</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>Face Insight 👁️</h3>
+              <p>FaceInsight is a computer vision–based application that detects human faces in real time and predicts
+                key
+                facial attributes, including age range and mood/emotional state.</p>
+              <div class="project-links">
+                <a href="https://github.com/rohit-sharma25/face-detection" target="_blank"
+                  class="btn-outline">GitHub</a>
+                <a href="https://face-recognition-git-main-rohit-s-projects-0ba6e1fb.vercel.app/" target="_blank"
+                  class="btn">Live Demo</a>
+              </div>
+            </div>
           </div>
-        </div>
 
-        <div class="project-card">
-          <img src="images/emotion.png" alt="Maze Finder" class="project-image" />
-          <h3>Emotion Analyzer </h3>
-          <p>Developed an NLP-based emotion detection system that classifies text and paragraphs into emotional
-            categories using machine learning. Trained on a custom dataset.</p>
-          <div class="project-links">
-            <a href="https://github.com/rohit-sharma25/Emotion-Analyzer" target="_blank">GitHub</a>
-            <a href="https://emotion-analyzer1.streamlit.app/" target="_blank">Live Link</a>
+          <div class="project-card card">
+            <div class="project-image-wrapper">
+              <img src="images/emotion.png" alt="Emotion Analyzer" class="project-image" />
+              <div class="project-overlay">
+                <span class="project-tag">NLP</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>Emotion Analyzer</h3>
+              <p>Developed an NLP-based emotion detection system that classifies text and paragraphs into emotional
+                categories using machine learning. Trained on a custom dataset.</p>
+              <div class="project-links">
+                <a href="https://github.com/rohit-sharma25/Emotion-Analyzer" target="_blank"
+                  class="btn-outline">GitHub</a>
+                <a href="https://emotion-analyzer1.streamlit.app/" target="_blank" class="btn">Live Demo</a>
+              </div>
+            </div>
           </div>
-        </div>
 
-        <div class="project-card">
-          <img src="images/AI.png" alt="Maze Finder" class="project-image" />
-          <h3>Virtual Assistant for Customer Query </h3>
-          <p>An intelligent customer support chatbot built with NLP and machine learning to handle e-commerce queries.
-            Features real-time conversation, intent classification, and automated responses for order tracking, returns,
-            product inquiries, and customer assistance</p>
-          <div class="project-links">
-            <a href="https://github.com/rohit-sharma25/AI-Customer-Query-Assistant" target="_blank">GitHub</a>
-            <a href="https://rohit-sharma25.github.io/AI-Customer-Query-Assistant/templates/index.html"
-              target="_blank">Live Link</a>
+          <div class="project-card card">
+            <div class="project-image-wrapper">
+              <img src="images/AI.png" alt="Virtual Assistant" class="project-image" />
+              <div class="project-overlay">
+                <span class="project-tag">AI/ML</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>Virtual Assistant for Customer Query</h3>
+              <p>An intelligent customer support chatbot built with NLP and machine learning to handle e-commerce
+                queries.
+                Features real-time conversation, intent classification, and automated responses.</p>
+              <div class="project-links">
+                <a href="https://github.com/rohit-sharma25/AI-Customer-Query-Assistant" target="_blank"
+                  class="btn-outline">GitHub</a>
+                <a href="https://rohit-sharma25.github.io/AI-Customer-Query-Assistant/templates/index.html"
+                  target="_blank" class="btn">Live Demo</a>
+              </div>
+            </div>
           </div>
-        </div>
 
-        <div class="project-card">
-          <img src="images/AI-resume.png" alt="Maze Finder" class="project-image" />
-          <h3> AI Resume Screening & Candidate Ranking System </h3>
-          <p>Developed an intelligent resume screening tool using NLP and machine learning to rank candidates through TF-IDF similarity, skill matching, and experience analysis. Deployed on Streamlit Cloud with interactive visualizations and batch processing support.</p>
-          <div class="project-links">
-            <a href="https://github.com/rohit-sharma25/Resume-Ranking-System" target="_blank">GitHub</a>
-            <a href="https://ai-ranking-system.streamlit.app/" target="_blank">Live Link</a>
+          <div class="project-card card">
+            <div class="project-image-wrapper">
+              <img src="images/AI-resume.png" alt="AI Resume Screening" class="project-image" />
+              <div class="project-overlay">
+                <span class="project-tag">AI/ML</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>AI Resume Screening & Candidate Ranking System</h3>
+              <p>Developed an intelligent resume screening tool using NLP and machine learning to rank candidates
+                through TF-IDF similarity, skill matching, and experience analysis.</p>
+              <div class="project-links">
+                <a href="https://github.com/rohit-sharma25/Resume-Ranking-System" target="_blank"
+                  class="btn-outline">GitHub</a>
+                <a href="https://ai-ranking-system.streamlit.app/" target="_blank" class="btn">Live Demo</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
       <!-- 🎨 Figma & Design Projects -->
-      <h3 style="text-align:center; color:#a855f7; margin-top:60px;">🎨 UI/UX Designs</h3>
-      <div class="projects-grid">
-        <div class="project-card">
-          <img src="images/prime.png" alt="Figma Design" class="project-image" />
-          <h3>Prime Website Design</h3>
-          <p>Designed a clean, product-focused Figma interface that uses strong visual hierarchy</p>
-          <div class="project-links">
-            <a href="https://www.figma.com/proto/642x2NrJs7q5spT5eI4bDe/Untitled?page-id=0%3A1&node-id=158-2&viewport=2080%2C847%2C0.08&t=HHAjAMMI1g8mCHd5-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=78%3A71"
-              target="_blank">Figma</a>
+      <div class="category-section">
+        <h3 class="category-title">🎨 UI/UX Designs</h3>
+        <div class="projects-grid">
+          <div class="project-card card">
+            <div class="project-image-wrapper">
+              <img src="images/prime.png" alt="Prime Website Design" class="project-image" />
+              <div class="project-overlay">
+                <span class="project-tag">UI/UX</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>Prime Website Design</h3>
+              <p>Designed a clean, product-focused Figma interface that uses strong visual hierarchy</p>
+              <div class="project-links">
+                <a href="https://www.figma.com/proto/642x2NrJs7q5spT5eI4bDe/Untitled?page-id=0%3A1&node-id=158-2&viewport=2080%2C847%2C0.08&t=HHAjAMMI1g8mCHd5-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=78%3A71"
+                  target="_blank" class="btn">View Design</a>
+              </div>
+            </div>
           </div>
-        </div>
 
-        <div class="project-card">
-          <img src="images/Jordan.png" alt="Figma Design" class="project-image" />
-          <h3>Nike Air Jordan</h3>
-          <p>Created a most famous shoe brand's interface, centered on bold visual hierarchy, clean composition, and
-            product-focused aesthetics</p>
-          <div class="project-links">
-            <a href="https://www.figma.com/proto/642x2NrJs7q5spT5eI4bDe/Untitled?page-id=0%3A1&node-id=154-2&viewport=2189%2C1770%2C0.11&t=d54ZEqq4C2qbNoMl-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=78%3A71"
-              target="_blank">Figma</a>
+          <div class="project-card card">
+            <div class="project-image-wrapper">
+              <img src="images/Jordan.png" alt="Nike Air Jordan" class="project-image" />
+              <div class="project-overlay">
+                <span class="project-tag">UI/UX</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>Nike Air Jordan</h3>
+              <p>Created a most famous shoe brand's interface, centered on bold visual hierarchy, clean composition, and
+                product-focused aesthetics</p>
+              <div class="project-links">
+                <a href="https://www.figma.com/proto/642x2NrJs7q5spT5eI4bDe/Untitled?page-id=0%3A1&node-id=154-2&viewport=2189%2C1770%2C0.11&t=d54ZEqq4C2qbNoMl-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=78%3A71"
+                  target="_blank" class="btn">View Design</a>
+              </div>
+            </div>
           </div>
-        </div>
 
-
-        <div class="project-card">
-          <img src="images/Porsche red.png" alt="Figma Design" class="project-image" />
-          <h3>A sleek Porsche 911 concept design</h3>
-          <p> The project reflects my passion for automotive design and attention to visual perfection.</p>
-          <div class="project-links">
-            <a href="https://www.figma.com/proto/642x2NrJs7q5spT5eI4bDe/Untitled?page-id=0%3A1&node-id=95-96&viewport=4981%2C1963%2C0.23&t=lEX3AsqWk83iQcwc-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=78%3A71"
-              target="_blank">Figma</a>
+          <div class="project-card card">
+            <div class="project-image-wrapper">
+              <img src="images/Porsche red.png" alt="Porsche 911 Design" class="project-image" />
+              <div class="project-overlay">
+                <span class="project-tag">UI/UX</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>A sleek Porsche 911 concept design</h3>
+              <p>The project reflects my passion for automotive design and attention to visual perfection.</p>
+              <div class="project-links">
+                <a href="https://www.figma.com/proto/642x2NrJs7q5spT5eI4bDe/Untitled?page-id=0%3A1&node-id=95-96&viewport=4981%2C1963%2C0.23&t=lEX3AsqWk83iQcwc-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=78%3A71"
+                  target="_blank" class="btn">View Design</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
+
   <footer>
     <div class="container">
-      <p>© 2025 Rohit Sharma. All rights reserved.</p>
+      <p>© <span class="current-year">2025</span> Rohit Sharma. All rights reserved.</p>
     </div>
   </footer>
 
-  <script>
-    const menuToggle = document.querySelector(".menu-toggle");
-    const navLinks = document.querySelector(".nav-links");
-
-    menuToggle.addEventListener("click", () => {
-      navLinks.classList.toggle("active");
-    });
-  </script>
+  <script src="js/main.js"></script>
 
 </body>
 
