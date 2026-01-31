@@ -123,6 +123,21 @@
   transform: scale(1.2) rotate(5deg);
 }
 
+/* Skill Icon Image */
+.skill-icon-img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  margin-bottom: var(--spacing-sm);
+  transition: transform var(--transition-base);
+  filter: drop-shadow(0 4px 8px rgba(168, 85, 247, 0.2));
+}
+
+.skill-card:hover .skill-icon-img {
+  transform: scale(1.2) rotate(5deg);
+  filter: drop-shadow(0 8px 16px rgba(168, 85, 247, 0.4));
+}
+
 /* Skill Name */
 .skill-name {
   display: block;
@@ -178,6 +193,11 @@
     font-size: 2rem;
   }
 
+  .skill-icon-img {
+    width: 56px;
+    height: 56px;
+  }
+
   .skill-name {
     font-size: 0.9rem;
   }
@@ -198,6 +218,11 @@
 
   .skill-icon {
     font-size: 1.75rem;
+  }
+
+  .skill-icon-img {
+    width: 48px;
+    height: 48px;
   }
 
   .skill-name {
